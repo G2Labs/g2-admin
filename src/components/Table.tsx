@@ -49,7 +49,7 @@ const ProjectTable: React.FC<{ data: ProjectInterface[]; loading: boolean }> = (
             key: 'clientName',
         },
         {
-            title: 'Cost',
+            title: 'Dev Cost',
             dataIndex: 'projectCost',
             key: 'projectCost',
             // responsive: ['md'],
@@ -61,7 +61,7 @@ const ProjectTable: React.FC<{ data: ProjectInterface[]; loading: boolean }> = (
             // responsive: ['lg'],
         },
         {
-            title: 'Payment',
+            title: 'Price',
             dataIndex: 'paymentAmount',
             key: 'paymentAmount',
             // responsive: ['lg'],
@@ -81,6 +81,16 @@ const ProjectTable: React.FC<{ data: ProjectInterface[]; loading: boolean }> = (
             title: 'Outstanding',
             dataIndex: 'outstanding',
             key: 'outstanding',
+        },
+        {
+            title: 'Start',
+            dataIndex: 'startDate',
+            key: 'startDate',
+        },
+        {
+            title: 'End',
+            dataIndex: 'endDate',
+            key: 'endDate',
         },
         {
             title: 'Status',
