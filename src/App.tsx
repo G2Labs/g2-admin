@@ -21,13 +21,13 @@ const { Title } = Typography;
 const App: React.FC = () => {
     const [data, setData] = useState<ProjectInterface[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<string | null>(null);
+    // const [error, setError] = useState<string | null>(null);
 
     // Fetch data from the Google Apps Script endpoint
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            setError(null);
+            // setError(null);
             try {
                 const response = await fetch('https://script.google.com/macros/s/AKfycbx6LZtblbYf7oDxzVBd45pAhoEqpjRH9VIz_Sq8s_qvMcu8YCw9tFp8Axad4VvR2DUHhw/exec');
                 const result = await response.json();
@@ -37,8 +37,9 @@ const App: React.FC = () => {
                 } else {
                     throw new Error(result.message || 'Failed to fetch data');
                 }
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
             } catch (err: any) {
-                setError(err.message || 'An error occurred while fetching data');
+                // setError(err.message || 'An error occurred while fetching data');
             } finally {
                 setLoading(false);
             }
